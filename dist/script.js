@@ -1,0 +1,1 @@
+function newfact(){fetch("https://api.chucknorris.io/jokes/random").then(e=>e.json()).then(e=>{console.log(e),document.getElementById("test").innerText=e.value})}

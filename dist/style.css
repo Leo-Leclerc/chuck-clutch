@@ -1,0 +1,100 @@
+footer p, section button, section, header, p, h4, h1, div#contenu {
+  text-align: center;
+}
+
+p, h4, h1, body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-color: burlywood;
+  height: 50%;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+div#contenu {
+  background-color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 100%;
+}
+
+h1 {
+  color: orangered;
+  font-size: 2em;
+}
+
+h4 {
+  color: orangered;
+  font-size: 0.8em;
+}
+
+p {
+  font-size: x-large;
+}
+
+a {
+  text-decoration: none;
+  color: orangered;
+}
+
+button {
+  background-color: orangered;
+  border: black;
+  border-radius: 5px;
+  padding: 12px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+header {
+  background-color: black;
+  padding: 10px 0;
+}
+
+header div {
+  height: 155px;
+  overflow: hidden;
+  margin: auto;
+}
+
+header div img {
+  width: auto;
+  height: 220px;
+}
+
+section {
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+
+section.watch {
+  display: inline-flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section.watch img {
+  width: 40%;
+}
+
+section button {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+section.watch p {
+  font-size: x-large;
+  align-self: center;
+}
+
+footer p {
+  font-size: small;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=style.css.map */

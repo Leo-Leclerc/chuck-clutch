@@ -6,113 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuck Norris Fact</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
-    <style>
-        html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: rgb(255, 175, 83);
-            background-repeat: no-repeat;
-            height: 50%;
-            font-size: 20px;
-            font-family: 'Josefin Sans', sans-serif;
-        }
-
-        div#contenu {
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            margin-left: 50px;
-            margin-right: 50px;
-            height: 100vh;
-        }
-
-        h1 {
-            color: orangered;
-            margin: 0;
-            font-size: 2em;
-        }
-
-        h4 {
-            color: orangered;
-            margin: 0;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            font-size: 1em;
-        }
-
-        a {
-            text-decoration: none;
-            color: orangered;
-        }
-
-        button {
-            background-color: orangered;
-            border: none;
-            border-radius: 5px;
-            padding: 8px;
-            letter-spacing: 1px;
-            font-weight: bolder;
-        }
-
-        header {
-            background-color: black;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        header div {
-            height: 155px;
-            overflow: hidden;
-            margin: auto;
-        }
-
-        header div img {
-            width: auto;
-            height: 220px;
-        }
-
-        section {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-top: 50px;
-        }
-
-        section button {
-            text-align: center;
-            margin-top: 100px;
-            margin-bottom: 50px;
-        }
-
-        section p {
-            margin-left: 20%;
-            margin-right: 20%;
-        }
-
-        footer {
-            position: absolute;
-            bottom: 0;
-            text-align: center;
-            font-size: x-small;
-            font-style: italic;
-        }
-    </style>
+    <link rel="stylesheet" href="dist/style.css">
+    <script src="dist\script.js"></script>
 </head>
 
-<body>
+<body onload="newfact()">
 
     <header>
         <div>
-            <img src="https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png"
+            <img src="src\images\chucknorris_logo.png"
                 alt="Chuck Norris does not do">
         </div>
     </header>
@@ -125,37 +27,19 @@
             <p id="test"></p>
             <button onclick="newfact()">Generate a new random fact</button>
         </section>
+        <section class="watch">
+            <img src="dist\images\chuck-norris-thumps-up.jpg" alt="chuck thumbs up">
+            <p>Make Chuck Norris proud, or he will take your wife and kids. (friendship is magic by the way). Remember that Chuck Norris has a grizzly bear carpet in his room that isn't dead, just afraid to move.</p>
+        </section>
+        <section class="watch">
+            <p>Chuck Norris is the best cooker the world ever know, he can bake a cake in the freezer and when he slice onions, onions cry.</p>
+            <img src="dist\images\chuck-cowboy.jpg" alt="chuck cowboy">
+        </section>
         <footer>
             <p>Created by <a target="_blank" href="https://github.com/leo-leclerc">Léo LECLERC</a> with the <a
                     target="_blank" href="https://api.chucknorris.io">API of Chuck Norris</a></p>
         </footer>
     </div>
-
-    <script type="text/javascript">
-
-        fetch("https://api.chucknorris.io/jokes/random")
-            .then(response => response.json())
-            .then((response) => {
-                // Code éxécuté quand vous recevez la réponse
-                console.log(response);
-
-                let p = document.getElementById("test");
-                p.innerText = response.value;
-            })
-
-            function newfact(){
-                fetch("https://api.chucknorris.io/jokes/random")
-            .then(response => response.json())
-            .then((response) => {
-                // Code éxécuté quand vous recevez la réponse
-                console.log(response);
-
-                let p = document.getElementById("test");
-                p.innerText = response.value;
-            })
-            }
-    </script>
-
 </body>
 
 </html>
